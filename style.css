@@ -5,18 +5,26 @@
 html,body{
     margin:0;
     padding:0;
+    scroll-behavior: smooth;
+}
+
+.p{
+    margin:10px
 }
 
 .navbar-sec{
-    height:4.5rem;
+    height:6rem;
     background-color: whitesmoke;
-    
+    text-align:center;
+    margin:0 1% 0 1%;
+    position:sticky;
+    top:0
 }
 
 .flex{
     display:flex;
-    margin-left:10%;
-    margin-right:10%;
+    max-width:1200px;
+    margin:0 auto;
     text-align: center;
     justify-content:space-between;  
     font-family: 'Roboto', sans-serif;
@@ -29,29 +37,33 @@ a{
 
 .flex ul{
     margin-right:1rem;
-    padding:0;
+    padding-top:1rem;
 }
 
 .flex ul a{
-    padding-left:.8rem;
-    padding-right:.8rem;
-    font-size:1.2rem;
+    padding-left:.9rem;
+    padding-right:.9rem;
+    font-size:1.25rem;
 }
 
 .flex ul a:hover{
     text-decoration: underline;
     text-decoration-color:grey ;
     text-decoration-thickness:5px;
+    color:#a7a7a7
 }
 
 #nav-btn{
     display:none;
     font-size:2.5rem;
-    cursor:pointer
+    cursor:pointer;
+    align-self:center;
 }
 
 .container{
-    margin:1rem
+    padding-top:4rem;
+    max-width:80%;
+    margin:0 auto;
 }
 
 .flex-container{
@@ -61,15 +73,88 @@ a{
 
 .flex-left{
     font-family: 'Poppins', sans-serif;
+    width:50%;
 }
 
+.flex-left h1{
+    font-size:3rem;
+    color:#b3a5a5
+}
 
+.flex-left p{
+    font-size:1.1rem;
+}
 
-@media screen and (max-width=768px){
+#contact{
+    max-width:80%;
+    margin:0 auto;
+    margin-top:8rem;
+}
+
+#contact h1{
+    text-align:center;
+    font-size:80px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sosmed-flex{
+    display:flex;
+    align-content:center;
+}
+
+.sosmed i{
+    font-size:150px;
+}
+
+.sosmed{
+    width:297px;
+    height:auto;
+    background-color: rgb(143, 177, 92);
+    border:8px solid white;
+    padding:20px;
+    padding-bottom:30px;
+    text-align:center;
+}
+
+.sosmed p{
+    font-size:1.25rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.followbtn{
+    background-color:white;
+    padding:8px 30% 8px 30%;
+    font-family: 'Spirax', cursive;
+    font-size:1.1rem;
+}
+
+.followbtn:hover{
+    background-color:dimgray;
+    color:white;
+}
+
+@media screen and (max-width:1100px){
+    .sosmed-flex{
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+}
+
+@media screen and (max-width:900px){
+    .sosmed{
+        width:260px;
+        padding:17px;
+    }
+}
+
+@media screen and (max-width:768px){
     #nav-btn{
         display:inline-block;
     }
     .flex ul a{
         display:none;
+    }
+    #contact h1{
+        font-size:50px;
     }
 }
